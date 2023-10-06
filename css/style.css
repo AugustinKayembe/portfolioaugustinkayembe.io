@@ -1,0 +1,252 @@
+/* Réinitialisation des styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+#accueil, #contact, #apropos{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.photo-profil {
+    text-align: center;
+    margin-top: 20px; /* Espacement par rapport au titre */
+}
+
+.photo-profil img {
+    width: 150px; /* Ajustez la largeur de la photo en fonction de vos besoins */
+    height: 150px; /* Ajustez la hauteur de la photo en fonction de vos besoins */
+    border-radius: 50%; /* Rend la photo circulaire */
+    object-fit: cover; /* Ajuste la taille de la photo pour qu'elle remplisse le cercle */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre à la photo */
+}
+
+section#contact p {
+    display: block; /* Afficher les éléments en bloc (verticalement) */
+}
+
+/* Style des blocs de contact pour mobile */
+section#contact a {
+    display: block; /* Afficher les liens en tant que blocs pour créer une zone cliquable plus grande */
+    text-align: center; /* Centrer le texte dans les blocs */
+    padding: 10px; /* Ajouter un espace autour du texte */
+    border: 1px solid #ddd; /* Ajouter une bordure */
+    margin-bottom: 10px; /* Espacement entre les blocs */
+    transition: background-color 0.3s ease-in-out; /* Ajouter une transition d'arrière-plan en douceur */
+    text-decoration: none; /* Supprimer la décoration de lien par défaut */
+    color: #333; /* Couleur du texte */
+}
+
+/* Effet hover pour mobile */
+section#contact a:hover {
+    background-color: #007bff; /* Change la couleur d'arrière-plan au survol */
+    color: #fff; /* Change la couleur du texte au survol */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p a{
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.projet {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.titre_mesprojets{
+    text-align: center;
+}
+
+.projet h3 {
+    margin-bottom: 10px;
+}
+
+.projet img {
+    max-width: 100%; /* Pour s'assurer que l'image reste dans la boîte */
+}
+
+.projet a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.projet a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Styles spécifiques pour les tablettes et les grands écrans */
+@media screen and (min-width: 768px) {
+    /* Utilisation de display: grid pour organiser les projets en 3x2 */
+    section#projets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        grid-template-rows: auto; /* 2 lignes automatiques */
+        gap: 20px; /* Espacement entre les projets */
+        justify-content: center; /* Centre les projets horizontalement */
+        text-align: center;
+    }
+
+    /* Pour assurer que les projets remplissent l'espace disponible */
+    .projet {
+        flex: 1;
+    }
+
+    .titre_mesprojets{
+        text-align: center;
+        grid-column: span 3;
+    }
+
+    #accueil, #contact, #apropos{
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    
+    section#contact p {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        gap: 20px; /* Espacement entre les blocs */
+    }
+
+    /* Style des blocs de contact */
+    section#contact a {
+        display: block; /* Afficher les liens en tant que blocs pour créer une zone cliquable plus grande */
+        text-align: center; /* Centrer le texte dans les blocs */
+        padding: 10px; /* Ajouter un espace autour du texte */
+        border: 1px solid #ddd; /* Ajouter une bordure */
+        transition: background-color 0.3s ease-in-out; /* Ajouter une transition d'arrière-plan en douceur */
+        text-decoration: none; /* Supprimer la décoration de lien par défaut */
+        color: #333; /* Couleur du texte */
+    }
+
+    /* Effet hover */
+    section#contact a:hover {
+        background-color: #007bff; /* Change la couleur d'arrière-plan au survol */
+        color: #fff; /* Change la couleur du texte au survol */
+    }
+
+    .photo-profil {
+        margin-top: 0; /* Réduit l'espacement par rapport au titre */
+    }
+
+    .photo-profil img {
+        width: 200px; /* Ajustez la largeur de la photo pour les tablettes */
+        height: 200px; /* Ajustez la hauteur de la photo pour les tablettes */
+    }
+}
+
+/* Styles spécifiques pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    /* Utilisation de display: grid pour organiser les projets en 3x2 */
+    section#projets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        grid-template-rows: auto; /* 2 lignes automatiques */
+        gap: 20px; /* Espacement entre les projets */
+        justify-content: center; /* Centre les projets horizontalement */
+        text-align: center;
+    }
+
+    /* Pour assurer que les projets remplissent l'espace disponible */
+    .projet {
+        flex: 1;
+    }
+
+    .titre_mesprojets{
+        text-align: center;
+        grid-column: span 3;
+    }
+
+    #accueil, #contact, #apropos{
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    section#contact p {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        gap: 20px; /* Espacement entre les blocs */
+    }
+
+    /* Style des blocs de contact */
+    section#contact a {
+        display: block; /* Afficher les liens en tant que blocs pour créer une zone cliquable plus grande */
+        text-align: center; /* Centrer le texte dans les blocs */
+        padding: 10px; /* Ajouter un espace autour du texte */
+        border: 1px solid #ddd; /* Ajouter une bordure */
+        transition: background-color 0.3s ease-in-out; /* Ajouter une transition d'arrière-plan en douceur */
+        text-decoration: none; /* Supprimer la décoration de lien par défaut */
+        color: #333; /* Couleur du texte */
+    }
+
+    /* Effet hover */
+    section#contact a:hover {
+        background-color: #007bff; /* Change la couleur d'arrière-plan au survol */
+        color: #fff; /* Change la couleur du texte au survol */
+    }
+
+    .photo-profil {
+        margin-top: 0; /* Réduit l'espacement par rapport au titre */
+    }
+
+    .photo-profil img {
+        width: 200px; /* Ajustez la largeur de la photo pour les tablettes */
+        height: 200px; /* Ajustez la hauteur de la photo pour les tablettes */
+    }
+}
